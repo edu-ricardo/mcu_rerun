@@ -92,7 +92,10 @@ function App() {
                     <span className="phase-badge">Phase {movie.phase}</span>
                     {plannedDate && <span className="planned-badge">Planned: {new Date(plannedDate).toLocaleDateString()}</span>}
                   </div>
-                  <h3>{movie.title}</h3>
+                  <div className="movie-title-row">
+                    <span className="movie-icon">{movie.icon}</span>
+                    <h3>{movie.title}</h3>
+                  </div>
                   <p className="release-date">Release: {new Date(movie.releaseDate).toLocaleDateString()}</p>
                 </div>
               </div>

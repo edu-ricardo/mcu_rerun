@@ -351,6 +351,29 @@ footer {
   gap: 0.5rem;
 }
 
+.movie-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.movie-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(230, 36, 41, 0.3));
+}
+
+.mini-icon {
+  margin-right: 4px;
+  font-size: 0.8rem;
+}
+
+.tag-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .movie-selector button {
   background: #333;
   color: white;
@@ -360,6 +383,9 @@ footer {
   text-align: left;
   cursor: pointer;
   transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .movie-selector button:hover {

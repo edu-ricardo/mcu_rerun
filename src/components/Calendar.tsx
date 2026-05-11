@@ -74,7 +74,8 @@ export default function Calendar({ movies, plannedDates, onAssign, onRemove }: C
               <div className="day-movies">
                 {dayMovies.map(movie => (
                   <div key={movie.id} className="planned-movie-tag" title={movie.title}>
-                    {movie.title.split(':')[0]}
+                    <span className="mini-icon">{movie.icon}</span>
+                    <span className="tag-text">{movie.title.split(':')[0]}</span>
                     <button 
                       className="remove-btn" 
                       onClick={(e) => {
