@@ -95,6 +95,27 @@ export default function Calendar({ movies, plannedDates, onAssign, onRemove }: C
         <div className="modal-overlay" onClick={() => setSelectedDay(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <h3>Plan for {MONTHS[month]} {selectedDay}</h3>
+            
+            {getMoviesForDate(formatDate(selectedDay)).length > 0 && (
+              <div className="current-planned-section">
+                <h4>Planned for this day:</h4>
+                <div className="movie-selector">
+                  {getMoviesForDate(formatDate(selectedDay)).map(movie => (
+                    <div key={movie.id} className="planned-item-row">
+                      <span>{movie.icon} {movie.title}</span>
+                      <button 
+                        className="remove-planned-btn"
+                        onClick={() => onRemove(movie.id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <h4>Add Movie:</h4>
             <div className="movie-selector">
               {availableMovies.length > 0 ? (
                 availableMovies.map(movie => (
@@ -105,6 +126,7 @@ export default function Calendar({ movies, plannedDates, onAssign, onRemove }: C
                       setSelectedDay(null)
                     }}
                   >
+                    <span className="movie-icon">{movie.icon}</span>
                     {movie.title}
                   </button>
                 ))
