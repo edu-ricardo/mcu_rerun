@@ -1,0 +1,171 @@
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #f0f0f0;
+  background-color: #0b0b0b;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --marvel-red: #e62429;
+  --marvel-dark-grey: #202020;
+  --marvel-light-grey: #393939;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--marvel-red);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.subtitle span {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Progress Section */
+.progress-section {
+  background: var(--marvel-dark-grey);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--marvel-red);
+  transition: width 0.4s ease-out;
+}
+
+.progress-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: right;
+}
+
+/* Movie List */
+.movie-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.movie-card {
+  display: flex;
+  align-items: center;
+  background: var(--marvel-dark-grey);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  border: 1px solid transparent;
+}
+
+.movie-card:hover {
+  transform: translateX(5px);
+  background: var(--marvel-light-grey);
+}
+
+.movie-card.watched {
+  opacity: 0.6;
+  background: #151515;
+}
+
+.movie-card.watched:hover {
+  opacity: 0.8;
+}
+
+.movie-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--marvel-red);
+  border-radius: 4px;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.movie-card.watched .movie-checkbox {
+  background: var(--marvel-red);
+}
+
+.check-icon {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.phase-badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background: #444;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  color: #fff;
+}
+
+.release-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .container { padding: 1rem; }
+}
