@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Movie } from '../data/movies'
-import { PlannedDates } from '../App'
+import type { Movie } from '../data/movies'
+import type { PlannedDates } from '../App'
 
 interface CalendarProps {
   movies: Movie[];
